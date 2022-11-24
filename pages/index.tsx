@@ -23,6 +23,7 @@ query{
 
 const Home: NextPage = () => {
   const {data, loading} = useQuery(GET_PRODUCTS)
+  console.log(data)
   const productList = data && data.getAllProducts.data || []
   if(loading) return <p>Loading...</p>
   return (
